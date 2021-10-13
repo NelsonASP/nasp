@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), MainView {
     override fun showResult(result: ArrayList<UserDataCollectionItem> ) {
         Log.d("Success Response", result.toString())
         progressBar?.dismiss()
-        
+
         search.visibility= View.VISIBLE
         recyclerview.visibility = View.VISIBLE
         showData(result)
