@@ -10,14 +10,15 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 import javax.inject.Inject
 
 
-class MainInteractorImpl @Inject constructor(
-) : MainInteractor {
+class MainInteractorImplPost @Inject constructor(
+) : MainInteractorPost {
 
-    override fun listUsers(subscriber: Observer<ArrayList<UserDataCollectionItem>>) {
-        RestEngine.getRestEngine().create(UserService::class.java).listUsers()
+    override fun listPost(subscriber: Observer<ArrayList<PostDataCollectionItem>>) {
+        RestEngine.getRestEngine().create(UserService::class.java).listPost()
             .subscribeOn(Schedulers.newThread())
             //.map { it.filter { it.name == "Leanne Graham" } } Para filtrar datos en caso que sea necesario
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeWith(subscriber)
     }
+
 }

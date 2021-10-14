@@ -1,7 +1,5 @@
 package com.nasp.restservicewithkotlin.presenter
 
-interface MainPresenter {
-
-    fun listUsers()
-
+interface MainPresenterPos {
+    fun listPosts()
 }
