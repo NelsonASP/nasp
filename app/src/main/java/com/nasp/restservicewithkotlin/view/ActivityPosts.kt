@@ -55,6 +55,7 @@ class ActivityPosts : AppCompatActivity(), MainViewPos {
         Log.d("Error", t)
     }
 
+
     private fun showData(users: ArrayList<PostDataCollectionItem>) {
         binding.recyclerViewPostsResults.adapter = ApiAdapterPos(users)
         binding.recyclerViewPostsResults.setHasFixedSize(true)
